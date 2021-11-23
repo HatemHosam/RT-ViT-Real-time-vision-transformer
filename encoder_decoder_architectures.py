@@ -300,20 +300,10 @@ def ViT_t16_DS_decoder (dataset= 'NYUV2'):
         print('The available weights are for CS or NYUV2 datasets')
      
     #decoder
-    # UP 1
-    x = Conv2DTranspose(512, (2, 2), strides=(2, 2), padding='same', activation='relu')(x)
     x = Conv2D(512, (3, 3), padding='same', activation='relu')(x)
-    # UP 2
-    x = Conv2DTranspose(256, (2, 2), strides=(2, 2), padding='same', activation='relu')(x)
     x = Conv2D(256, (3, 3), padding='same', activation='relu')(x)
-    # UP 3
-    x = Conv2DTranspose(128, (2, 2), strides=(2, 2), padding='same', activation='relu')(x)
-    x = Conv2D(128, (3, 3), padding='same', activation='relu')(x)
-    # UP 4
-    x = Conv2DTranspose(64, (2, 2), strides=(2, 2), padding='same', activation='relu')(x)
-    x = Conv2D(64, (3, 3), padding='same', activation='relu')(x)
 
-    out = Conv2D(1, (1, 1), padding='same')(x)
+    out = tf.nn.depth_to_space(x, 16)
     model = tf.keras.models.Model(vit_model.input, out)
     #load pre-trained weights
      if dataset= ='NYUV2':
