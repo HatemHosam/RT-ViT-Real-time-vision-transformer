@@ -1,5 +1,7 @@
 # RT-ViT-Real-time-vision-transformer
 This is the evaluation code of: RT-ViT: Real-Time Monocular Depth Estimation Using Lightweight Vision Transformers [paper](https://www.mdpi.com/1424-8220/22/10/3849)
+![fig1](assets/RT_vit_fig1.png)
+![fig2](assets/RT_vit_fig2.png)
 <br>Requirements:
 <br>Tensorflow 2.5.0
 <br>vit_keras 0.1.0
