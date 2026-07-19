@@ -1,7 +1,7 @@
 # RT-ViT-Real-time-vision-transformer
-this is the evaluation code of: RT-ViT: Real-Time Monocular Depth Estimation Using Lightweight Vision Transformers 
+This is the evaluation code of: RT-ViT: Real-Time Monocular Depth Estimation Using Lightweight Vision Transformers [paper] (https://www.mdpi.com/1424-8220/22/10/3849)
 <br>Requirements:
 <br>Tensorflow 2.5.0
 <br>vit_keras 0.1.0
 <br>opencv-python 4.0.0
-<br>Note: the ground truth depth were extracted from the .mat file and saved in .npy format for easier and faster loading during training of the models.
+<br>Note: the ground truth depth maps were extracted from the .mat file and saved in .npy format for easier and faster loading during training of the models.
